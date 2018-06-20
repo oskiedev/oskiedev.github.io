@@ -1,3 +1,16 @@
+@font-face {
+    font-family: aceSans;
+    src: url(../fonts/AceSans.otf);
+}
+@font-face {
+    font-family: aceLight;
+    src: url(../fonts/AceSans-Light.otf);
+}
+@font-face {
+    font-family: frankLight;
+    src: url(../fonts/Frank-Light.otf);
+}
+
 h1,h2,h3,h4,p {
     margin: 0;
 }
@@ -49,12 +62,15 @@ h1,h2,h3,h4,p {
     margin-right: 20px;
     z-index: 99;
 }
+.info h1 {
+    font-family: 'aceSans', sans-serif;
+}
 .card1 .info h1 {
-    font-family: 'Anton', sans-serif;
     font-size: 45px;
+    margin-bottom: 3px;
 }
 .cover .info p {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
 }
 
@@ -190,7 +206,10 @@ h1,h2,h3,h4,p {
     align-items: center;
 }
 .card2 .info h1 {
-    font-size: 26px;
+    font-size: 28px;
+}
+.card2 .info p {
+    font-size: 15px;
 }
 .chevron {
   position: absolute;
@@ -224,4 +243,18 @@ h1,h2,h3,h4,p {
 .chevron:after {
   bottom: 0;
   -webkit-transform: skew(-20deg, 0deg);
+}
+
+.personal-info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+.personal-info span {
+    display: block;
+}
+.personal-info span.name {
+    font-size: 26px;
+}
+.personal-info span.title {
+    font-size: 18px;
 }
