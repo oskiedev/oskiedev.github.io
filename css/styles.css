@@ -51,6 +51,25 @@ img {
 .cover {
     z-index: 99;
 }
+.card1 .cover {
+    position: relative;
+    background-image: url('../images/cover.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.card1 .cover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0,0,0,.9);
+}
 
 .card1 .cover {
     width: 100%;
@@ -402,6 +421,65 @@ hr.theme-bg {
 }
 .portfolio li:hover {
     width: 400px;
+}
+
+/* ----- CARD 4 ----- */
+.card4 {
+    position: relative;
+}
+.card4 .wrap {
+    position: relative;
+    background-image: url('../images/people.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.card4 .wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,.7);
+}
+.card4 .footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(20,20,20,.9);
+    height: 200px;
+    z-index: 2;
+    border-top: 8px solid #F04A58;
+}
+.card4 .grid {
+    display: flex;
+    align-items: center;
+}
+.card4 .hexagon {
+    height: 130px;
+    width: 70px;
+}
+.card4 .hexagon.big {
+    height: 140px;
+    width: 80px;
+}
+.card4 .hexagon.abs {
+    top: 5px;
+    left: 5px;
+}
+.card4 .info h1 {
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+.card4 .info p {
+    font-size: 11px;
 }
 
 /* theme */
