@@ -2,17 +2,24 @@
     font-family: aceSans;
     src: url(../fonts/AceSans.otf);
 }
-@font-face {
-    font-family: aceLight;
-    src: url(../fonts/AceSans-Light.otf);
-}
-@font-face {
-    font-family: frankLight;
-    src: url(../fonts/Frank-Light.otf);
+
+body {
+    margin: 0;
 }
 
 h1,h2,h3,h4,p {
     margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 .main {
@@ -21,7 +28,12 @@ h1,h2,h3,h4,p {
     align-items: center;
     flex-direction: column;
     padding: 50px 0;
-    background: #ecf0f1;
+    background-color: #ecf0f1;
+    background-image: url('../images/background-blur.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Roboto Condensed', sans-serif;
     color: #F4F4F4;
     font-size: 16px;
@@ -34,10 +46,6 @@ h1,h2,h3,h4,p {
     background: #141414;
     box-shadow: 0px 1px 15px #333;
     margin-bottom: 45px;
-}
-
-.theme-color {
-    color: #F04A58;
 }
 
 .cover {
@@ -123,6 +131,41 @@ h1,h2,h3,h4,p {
 }
 
 
+.chevron {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 40px;
+  height: 450px;
+  z-index: 3;
+}
+.chevron.c1 {
+  width: 26px;
+}
+.chevron:before,
+.chevron:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 225px;
+  left: 0;
+  background: #F04A58;
+}
+.chevron.c1:before,
+.chevron.c1:after {
+    background: #333;
+}
+.chevron:before {
+  top: 0;
+  -webkit-transform: skew(20deg, 0deg);
+}
+.chevron:after {
+  bottom: 0;
+  -webkit-transform: skew(-20deg, 0deg);
+}
+
+
 .cover-quote {
     position: relative;
     top: -23px;
@@ -133,7 +176,7 @@ h1,h2,h3,h4,p {
   align-items: center;
   position: relative;
   background: #F04A58;
-  width: 300px;
+  width: 200px;
   height: 40px;
   margin: auto;
   font-weight: 400;
@@ -143,27 +186,28 @@ h1,h2,h3,h4,p {
   content: '';
   position: absolute;
   top: 0;
-  left: -36px;
+  left: -18px;
   display: inline-block;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 2em solid #F04A58;
+  border-right: 1em solid #F04A58;
 }
 .shape:after {
   content: '';
   position: absolute;
   top: 0;
-  right: -36px;
+  right: -18px;
   display: inline-block;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-left: 2em solid #F04A58;
+  border-left: 1em solid #F04A58;
 }
 
+/* ------ CARD 2 ------ */
 .card2 .grid {
     display: flex;
     height: 100%;
@@ -211,41 +255,14 @@ h1,h2,h3,h4,p {
 .card2 .info p {
     font-size: 15px;
 }
-.chevron {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  width: 40px;
-  height: 450px;
-  z-index: 3;
+.card2 .grid-b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
-.chevron.c1 {
-  width: 26px;
-}
-.chevron:before,
-.chevron:after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 225px;
-  left: 0;
-  background: #F04A58;
-}
-.chevron.c1:before,
-.chevron.c1:after {
-    background: #333;
-}
-.chevron:before {
-  top: 0;
-  -webkit-transform: skew(20deg, 0deg);
-}
-.chevron:after {
-  bottom: 0;
-  -webkit-transform: skew(-20deg, 0deg);
-}
-
 .personal-info {
+    width: 250px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
@@ -253,8 +270,144 @@ h1,h2,h3,h4,p {
     display: block;
 }
 .personal-info span.name {
-    font-size: 26px;
+    font-size: 32px;
+    font-weight: 700;
 }
 .personal-info span.title {
     font-size: 18px;
+}
+hr {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 2px;
+    background: #fff;
+    border: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+hr.theme-bg {
+    background: #F04A58;
+}
+.personal-info ul {
+    margin-top: 35px;
+}
+.personal-info ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.personal-info .icon {
+    margin-right: 15px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    background: #F04A58;
+}
+
+/* ------ CARD 3 ------ */
+.card3 .grid {
+    display: flex;
+    height: 100%;
+}
+.card3 .grid-a {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    padding: 50px 0 0 60px;
+}
+.card3 .grid-a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 0;
+    height: 0;
+    border-top: 225px solid transparent;
+    border-bottom: 225px solid transparent;
+    border-left: 80px solid #141414;
+    z-index: 2;
+}
+.card3 .grid-b {
+    position: relative;
+    width: 40%;
+    background-image: url('../images/portfolio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.card3 .grid-b:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 1;
+}
+.card3 .chevron {
+    right: -60px;
+}
+.portfolio h3 {
+    font-size: 26px;
+}
+.portfolio ul {
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.portfolio li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    margin-bottom: 15px;
+    z-index: 2;
+    height: 30px;
+    background: #F04A58;
+    transition: all .8s;
+    cursor: pointer;
+}
+.portfolio li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 370px;
+    height: 30px;
+    background: #F04A58;
+    z-index: -1;
+}
+.portfolio li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 10px solid #F04A58;
+    z-index: -1;
+}
+.portfolio .icon {
+    margin-right: 10px;
+}
+.portfolio .icon img {
+    width: 18px;
+}
+.portfolio a {
+    color: #eee;
+    text-decoration: none;
+}
+.portfolio li:hover {
+    width: 400px;
+}
+
+/* theme */
+.theme-color {
+    color: #F04A58;
+}
+.theme-bg {
+    background: #F04A58;
 }
