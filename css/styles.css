@@ -1,0 +1,227 @@
+h1,h2,h3,h4,p {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background: #ecf0f1;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #F4F4F4;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.main section.card {
+    width: 900px;
+    height: 450px;
+    background: #141414;
+    box-shadow: 0px 1px 15px #333;
+    margin-bottom: 45px;
+}
+
+.theme-color {
+    color: #F04A58;
+}
+
+.cover {
+    z-index: 99;
+}
+
+.card1 .cover {
+    width: 100%;
+    height: 100%;
+    border-top: 10px solid #F04A58;
+}
+.cover .grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    border-bottom: 5px solid #F04A58;
+}
+.logo {
+    position: relative;
+    margin-right: 20px;
+    z-index: 99;
+}
+.card1 .info h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+}
+.cover .info p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.hexagon {
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  cursor: pointer;
+  height: 200px;
+  overflow: hidden;
+  visibility: hidden;
+  width: 120px;
+}
+.hex1 {
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.hex2 {
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  height: 100%;
+  position: relative;
+  visibility: visible;
+  width: 100%;
+}
+.hexagon.abs {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.hexagon.big {
+    height: 220px;
+    width: 140px;
+}
+.small .hexagon {
+    height: 180px;
+    width: 100px;
+}
+.small .hexagon.big {
+    height: 200px;
+    width: 120px;
+}
+
+
+.cover-quote {
+    position: relative;
+    top: -23px;
+}
+.shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #F04A58;
+  width: 300px;
+  height: 40px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 18px;
+}
+.shape:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -36px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 2em solid #F04A58;
+}
+.shape:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -36px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 2em solid #F04A58;
+}
+
+.card2 .grid {
+    display: flex;
+    height: 100%;
+}
+.card2 .grid-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image: url('../images/city.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card2 .grid-a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 1;
+}
+.card2 .grid-a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 225px solid #141414;
+    border-bottom: 225px solid #141414;
+    border-left: 80px solid transparent;
+    z-index: 2;
+}
+.card2 .cover {
+    display: flex;
+    align-items: center;
+}
+.card2 .info h1 {
+    font-size: 26px;
+}
+.chevron {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 40px;
+  height: 450px;
+  z-index: 3;
+}
+.chevron.c1 {
+  width: 26px;
+}
+.chevron:before,
+.chevron:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 225px;
+  left: 0;
+  background: #F04A58;
+}
+.chevron.c1:before,
+.chevron.c1:after {
+    background: #333;
+}
+.chevron:before {
+  top: 0;
+  -webkit-transform: skew(20deg, 0deg);
+}
+.chevron:after {
+  bottom: 0;
+  -webkit-transform: skew(-20deg, 0deg);
+}
